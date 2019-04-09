@@ -1,0 +1,42 @@
+Read Me File for File DisIntegrator 
+			By Tejinder Singh
+
+Source File : Assemble.c
+Header File : Disector.h
+
+
+<<1>> How to use File DisIntegrator ?
+
+This program disintegrate (breaks) one large file into small managable and transmittable files. For example, if there is a file TEST.MP3 of size 50 MB on one system and you want to take this file to another system, but you cannot do so through attachments of e-mail. In this case, File DisIntegrator comes to the rescue. It can divide TEST.MP3 file into 5 small files of 10 MB each. Follow the steps,
+
+(a) Run ASSEMBLE.EXE 
+(b) Select the first option "Disintegrate the File", by pressing ENTER key.
+(c) Enter the file name TEST.MP3
+(d) Enter size of one file by writing 1024. Now it will make 5 files of 1024 KB (or 1MB) each of     names	TEST1.DAT	TEST2.DAT	TEST3.DAT	TEST4.DAT	TEST5.DAT
+    and one log file TEST.LOG (usually 28 bytes).
+(e) Bring all these 6 files to another system using floppies or attachments of e-mail. Also bring     ASSEMBLE.EXE to another system, if it is not there.
+(f) Run ASSEMBLE.EXE
+(g) Now, select the second option "Assemble the file", by pressing TAB key and then ENTER key.
+(h) Write the log file name TEST.LOG (or just TEST). If any file is missing it will tell the user     about the missing file and exit. So, make sure to bring all the files and again re-run           ASSEMBLE.EXE
+(i) Now, the program will assemble (or integrate) these files into one big file of 5 MB size with     name TEST.MP3
+
+
+<<2>> What if file name is greater than 5-characters or it contains spaces ?
+
+If the file name which is to be disintegrated (or broken down) are more than 8-characters or it contains spaces then user can easily rename the file having name less than 5-chars and extension 3-chars with no spaces, before subjecting the file to this program.
+
+There is no hard-and-fast rule to the restriction of atmost 5-chars of file name and atmost 3-chars of extension. In fact you can give 7-characters name if the total number of files that will get generated are less than 9. The reason is that this program gives names to generated files as NNNNNNN1.DAT to NNNNNNN9.DAT . The moment it tries to create tenth file, the name exceeds 8 characters and this file will never be created. With at most 5-chars the total number of files that can be created are 999 which are more than generally required.
+
+On the other hand, about the restriction on file extension, C's file I/O system does not open file if the file extension is greater than 3 characters.
+
+
+<<3>> How to stop when program does not stop creating files ?
+
+If the user has mistakenly given very small size, for example, the size of file to be disintegrated is 5 MB and user has given size of each file as 1 KB then there will be around 5120 files that will get generated. So, to stop mid-way the creation of files, press e key for exiting.
+
+	       	****************************************************************************
+		Query, if any, can be forwarded to tejinder.singh@aol.com
+		*********** ****************************************************************
+
+
+
